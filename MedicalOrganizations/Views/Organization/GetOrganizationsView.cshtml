@@ -1,0 +1,12 @@
+﻿<ul>
+    @{
+        foreach (var organization in Model.Organizations)
+        {
+            <li>
+                <p>@organization.Name</p>
+                <p>@organization.Id</p>
+            </li>
+        }
+    }
+
+</ul>

@@ -1,0 +1,36 @@
+﻿
+<ul>
+    @{
+        foreach (var organization in Model.Organizations)
+        {
+            <li>
+                <p>@organization.Name</p>
+                <p>@organization.Id</p>
+            </li>
+        }
+    }
+
+</ul>
+@if (Model.PageViewModel.HasPreviousPage)
+{
+    <a asp-action="ListView"
+       asp-route-page="@(Model.PageViewModel.PageNumber - 1)"
+       asp-route-skip="@(Model.FilterViewModel.Skip)"
+       asp-route-take="@(Model.FilterViewModel.Take)"
+       asp-route-sortorder="@(Model.SortViewModel.Current)"
+       class="btn btn-outline-dark">
+        Назад
+    </a>
+}
+@if (Model.PageViewModel.HasNextPage)
+{
+    <a asp-action="ListView"
+       asp-route-page="@(Model.PageViewModel.PageNumber + 1)"
+       asp-route-skip="@(Model.FilterViewModel.Skip)"
+       asp-route-take="@(Model.FilterViewModel.Take)"
+       asp-route-sortorder="@(Model.SortViewModel.Current)"
+       class="btn btn-outline-dark">
+        Вперед
+    </a>
+}
+

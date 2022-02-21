@@ -1,0 +1,37 @@
+﻿
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    font: 18px "Trebuchet MS", "Lucida Sans";
+}
+
+.container {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    margin-left: 150px;
+}
+
+.list {
+    margin-bottom: 20px;
+}
+
+header {
+    background-color: lightsteelblue;
+    padding: 20px;
+    font: 14px "Trebuchet MS", "Lucida Sans";
+}
+
+ul li {
+    border-bottom: solid;
+    border-bottom-width: thin;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+
